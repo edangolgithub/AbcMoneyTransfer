@@ -1,0 +1,7 @@
+﻿#!/bin/bash
+set -e
+
+
+dotnet ef database update --project /app/AbcMoneyTransfer.csproj --startup-project /app
+
+exec dotnet AbcMoneyTransfer.dll

@@ -1,0 +1,114 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.flag {
+    width: 40px;
+    height: 21px;
+    background-size: 29.6px auto;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url('/images/flag-sprite.svg');
+
+}
+flag--inr {
+    background-position: 0 -0px;
+}
+
+.flag--usd {
+    background-position: 0 -27.5px;
+}
+
+.flag--eur {
+    background-position: 0 -55px;
+}
+
+.flag--gbp {
+    background-position: 0 -82.5px;
+}
+
+.flag--chf {
+    background-position: 0 -110px;
+}
+
+.flag--aud {
+    background-position: 0 -137.5px;
+}
+
+.flag--cad {
+    background-position: 0 -165px;
+}
+
+.flag--sgd {
+    background-position: 0 -192.5px;
+}
+
+.flag--jpy {
+    background-position: 0 -220px;
+}
+
+.flag--cny {
+    background-position: 0 -247.5px;
+}
+
+.flag--sar {
+    background-position: 0 -275px;
+}
+
+.flag--qar {
+    background-position: 0 -302.5px;
+}
+
+.flag--thb {
+    background-position: 0 -330px;
+}
+
+.flag--aed {
+    background-position: 0 -357.5px;
+}
+
+.flag--myr {
+    background-position: 0 -385px;
+}
+
+.flag--krw {
+    background-position: 0 -412.5px;
+}
+
+.flag--sek {
+    background-position: 0 -440px;
+}
+
+.flag--dkk {
+    background-position: 0 -467.5px;
+}
+
+.flag--hkd {
+    background-position: 0 -495px;
+}
+
+.flag--kwd {
+    background-position: 0 -522.5px;
+}
+
+.flag--bhd {
+    background-position: 0 -550px;
+}

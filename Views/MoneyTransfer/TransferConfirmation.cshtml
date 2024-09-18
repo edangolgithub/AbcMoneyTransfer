@@ -1,0 +1,43 @@
+﻿@model MoneyTransferModel
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+@{
+    ViewData["Title"] = "Transfer Confirmation";
+}
+
+<h2>Transfer Confirmation</h2>
+
+<p>Your transfer has been successfully processed!</p>
+<div id="receipt">
+<ul>
+    <li><strong>Sender:</strong> @Model.SenderFirstName @Model.SenderLastName</li>
+    <li><strong>Receiver:</strong> @Model.ReceiverFirstName @Model.ReceiverLastName</li>
+    <li><strong>Bank:</strong> @Model.BankName</li>
+    <li><strong>Account Number:</strong> @Model.AccountNumber</li>
+    <li><strong>Transfer Amount (MYR):</strong> @Model.TransferAmountMYR</li>
+    <li><strong>Exchange Rate:</strong> @Model.ExchangeRate</li>
+    <li><strong>Payout Amount (NPR):</strong> @Model.PayoutAmountNPR</li>
+</ul>
+</div>
+<button id="downloadPdf" class="btn btn-success">Download Receipt as PDF</button>
+
+
+
+@section scripts{
+    <script type="text/javascript">
+        document.getElementById('downloadPdf').addEventListener('click', function () {
+           
+            var element = document.getElementById('receipt');
+
+            
+            html2pdf(element, {
+                margin: 1,
+                filename: 'Receipt.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            });
+        });
+    </script>
+
+}
